@@ -1,0 +1,134 @@
+/VAST (*Error *Ad) version
+
+/Error
+/Ad (?InLine ?Wrapper) id sequence conditionalAd adType
+
+/InLine /AdSystem /AdTitle /AdServingId +Impression *Category ?Description ?Advertiser ?Pricing *Survey *Error ?Extensions ?ViewableImpression ?AdVerifications /Creatives ?Expires
+
+/AdSystem version
+/AdTitle
+/Impression id
+/AdServingId
+/Category authority
+/Description
+/Advertiser id
+/Pricing model currency
+/Survey type
+/Error
+/Expires
+/ViewableImpression [*Viewable *NotViewable *ViewUndetermined] id
+/Viewable
+/NotViewable
+/ViewUndetermined
+/AdVerifications +Verification 
+/Verification [*JavaScriptResource *ExecutableResource] ?TrackingEvents ?VerificationParameters vendor
+/JavaScriptResource apiFramework browserOptional
+/ExecutableResource apiFramework language
+/TrackingEvents +Tracking
+/Tracking event
+/VerificationParameters
+/Extensions +Extension
+/Extension type
+/Creatives +Creative
+/Creative ?UniversalAdId ?CreativeExtensions [*Linear *NonLinearAds] ?CompanionAds id sequence adId apiFramework
+/UniversalAdId idRegistry
+/CreativeExtensions +CreativeExtension
+/CreativeExtension type
+/Linear ?Icons ?TrackingEvents ?AdParameters ?Duration *MediaFiles ?VideoClicks skipoffset 
+/Duration
+/AdParameters xmlEncoded
+/MediaFiles *Mezzanine /MediaFile *InteractiveCreativeFile ?ClosedCaptionFiles 
+/Mezzanine delivery type width height codec id fileSize mediaType
+/MediaFile id delivery type bitrate minBitrate maxBitrate width height scalable maintainAspectRatio codec apiFramework fileSize mediaType
+/InteractiveCreativeFile type apiFramework variableDuration
+/ClosedCaptionFiles +ClosedCaptionFile
+/ClosedCaptionFile type language
+/VideoClicks ?ClickThrough *ClickTracking *CustomClick
+/ClickThrough id
+/ClickTracking id
+/CustomClick id
+/TrackingEvents +Tracking
+/Tracking event offset
+/Icons /Icon
+/Icon [?StaticResource ?IFrameResource ?HtmlResource] ?IconClicks *IconViewTracking program width height xPosition yPosition duration offset apiFramework pxratio
+/StaticResource creativeType
+/IFrameResource
+/HTMLResource 
+/IconClicks [?IconClickThrough *IconClickTracking]
+/IconClickThrough
+/IconClickTracking id
+/IconViewTracking
+/NonLinearAds +NonLinear ?TrackingEvents 
+/NonLinear [?StaticResource ?IFrameResource ?HtmlResource] ?NonLinearClickThrough id width height expandedWidth expandedHeight scalable maintainAspectRatio minSuggestedDuration apiFramework
+/NonLinearClickThrough
+/NonLinearClickTracking
+/TrackingEvents +Tracking 
+/Tracking event
+/CompanionAds +Companion required
+/Companion [?StaticResource ?IFrameResource ?HtmlResource] ?AdParameters ?AltText ?CompanionClickThrough *CompanionClickTracking ?TrackingEvents id width height assetWidth assetHeight expandedWidth expandedHeight apiFramework adSlotId pxratio renderingMode
+/StaticResource creativeType
+/IFrameResource
+/HTMLResource 
+/AdParameters xmlEncoded
+/AltText
+/CompanionClickThrough
+/CompanionClickTracking id
+/TrackingEvents +Tracking
+/Tracking event
+
+/Wrapper /AdSystem +Impression ?Pricing *Error ?Extensions ?AdVerifications *BlockedAdCategories ?Creatives /VastAdTagUri followAdditionalWrappers allowMultipleAds fallbackOnNoAd
+
+/Impression id
+/VASTAdTagURI
+/AdSystem version
+/Pricing model currency
+/Error
+/ViewableImpression [*Viewable *NotViewable *ViewUndetermined] id
+/Viewable
+/NotViewable
+/ViewUndetermined
+/Verification [*JavaScriptResource *ExecutableResource] ?TrackingEvents ?VerificationParameters *BlockedAdCategories vendor
+/Verification vendor
+/JavaScriptResource apiFramework browserOptional
+/ExecutableResource apiFramework language
+/TrackingEvents +Tracking
+/Tracking event
+/VerificationParameters
+/BlockedAdCategories authority
+/Extensions +Extension
+/Extension type
+/Creatives +Creative 
+/Creative ?UniversalAdId ?CreativeExtensions [*Linear *NonLinearAds] ?CompanionAds id sequence adId apiFramework
+/Linear ?Icons ?TrackingEvents ?VideoClicks skipoffset 
+/TrackingEvents +Tracking 
+/Tracking event offset
+/VideoClicks *ClickTracking *CustomClick
+/ClickTracking id
+/CustomClick id
+/Icons /Icon
+/Icon [?StaticResource ?IFrameResource ?HtmlResource] ?IconClicks *IconViewTracking program width height xPosition yPosition duration offset apiFramework pxratio
+/StaticResource creativeType
+/IFrameResource
+/HTMLResource 
+/IconClicks [?IconClickThrough *IconClickTracking]
+/IconClickThrough
+/IconClickTracking id
+/IconViewTracking
+/InteractiveCreativeFile type apiFramework variableDuration
+/NonLinearAds +NonLinear ?TrackingEvents 
+/NonLinear *NonLinearClickTracking 
+/NonLinearClickThrough
+/NonLinearClickTracking
+/TrackingEvents +Tracking 
+/Tracking event
+/CompanionAds +Companion required
+/Companion [?StaticResource ?IFrameResource ?HtmlResource] ?AdParameters ?AltText ?CompanionClickThrough *CompanionClickTracking ?TrackingEvents id width height assetWidth assetHeight expandedWidth expandedHeight apiFramework adSlotId pxratio renderingMode
+/StaticResource creativeType
+/IFrameResource
+/HTMLResource 
+/AdParameters xmlEncoded
+/AltText
+/CompanionClickThrough
+/CompanionClickTracking id
+/TrackingEvents +Tracking 
+/Tracking event
