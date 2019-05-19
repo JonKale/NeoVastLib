@@ -33,9 +33,9 @@ var Operators = new Dictionary<char, (string, string)> {
     { '+', (">=", "at least") }
 };
 
-var Groups = new Dictionary<char, (string, string)> {
-    { '(', ("^", "contain either") },
-    { '[', ("|", "contain at least one of the") },
+var Groups = new Dictionary<char, (string, string, string)> {
+    { '(', ("^", "may not contain both the", " and ") },
+    { '[', ("|", "must contain at least one of the", ", ") },
     { ')', default },
     { ']', default }
 };
@@ -158,7 +158,7 @@ using (var fileWriter = new StreamWriter(File.OpenWrite(@"C:\src\NeoVastLib\NeoV
                 return true;
             }}
 
-            this.validationFailureMessage = ""children must contain {Groups[group.Value.Item1].Item2} the {String.Join($" or ", group.Value.Item2.Select(c => $"{c}Element"))} types"";
+            this.validationFailureMessage = ""children {Groups[group.Value.Item1].Item2} {(String.Join(Groups[group.Value.Item1].Item3, group.Value.Item2.Select(c => $"{c}Element")))} types"";
             return false;
         }}
     }}

@@ -30,20 +30,20 @@ namespace NeoVastLib
                 return false;
             }
 
-            if (!(this.Elements().Count(e => e is InLineElement) == 1))
+            if (!(this.Elements().Count(e => e is InLineElement) <= 1))
             {
-                this.validationFailureMessage = "must have exactly one InLineElement";
+                this.validationFailureMessage = "must have at most one InLineElement";
                 return false;
             }
 
 
-            if (!(this.Elements().Count(e => e is WrapperElement) == 1))
+            if (!(this.Elements().Count(e => e is WrapperElement) <= 1))
             {
-                this.validationFailureMessage = "must have exactly one WrapperElement";
+                this.validationFailureMessage = "must have at most one WrapperElement";
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -69,7 +69,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -95,7 +95,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -163,7 +163,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -189,7 +189,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -229,7 +229,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -255,7 +255,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -281,7 +281,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -307,7 +307,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -354,7 +354,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -380,7 +380,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -406,7 +406,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -509,7 +509,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -563,7 +563,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -596,7 +596,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -643,7 +643,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -676,7 +676,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -702,7 +702,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -722,7 +722,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -755,7 +755,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -781,7 +781,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -801,7 +801,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 
@@ -869,7 +869,7 @@ namespace NeoVastLib
                 return false;
             }
 
-            return false;
+            return true;
         }
     }
 }

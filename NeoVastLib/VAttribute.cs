@@ -21,16 +21,18 @@
         public bool Validate() => VastBuilderContext.SkipValidation || this.ValidateImpl();
     }
 
-    public sealed class InvalidVastAttributeException : Exception
+    public sealed class InvalidVastAttributeException : InvalidVastException
     {
-        public string Name { get; }
+        public string AttributeName { get; }
 
-        public object Value { get; }
+        public override string Name => this.AttributeName;
+
+        public object AttributeValue { get; }
 
         public InvalidVastAttributeException(string name, object value, string message) : base(message)
         {
-            this.Name = name;
-            this.Value = value;
+            this.AttributeName = name;
+            this.AttributeValue = value;
         }
     }
 }

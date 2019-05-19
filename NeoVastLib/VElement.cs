@@ -1,6 +1,7 @@
 ﻿namespace NeoVastLib
 {
     using System;
+    using System.Security.Cryptography.X509Certificates;
     using System.Xml.Linq;
 
     public interface IValidatable
@@ -43,10 +44,22 @@
             VastBuilderContext.SkipValidation || (this.ValidateContained() && this.ValidateGroups() && this.ValidateImpl());
     }
 
-    public sealed class InvalidVastElementException : Exception
+    public abstract class InvalidVastException : Exception
+    {
+        protected InvalidVastException(string message) : base(message)
+        {
+        }
+
+        public abstract string Name { get; }
+    }
+
+    public sealed class InvalidVastElementException : InvalidVastException
     {
         public string ElementName { get; }
 
+        public override string Name => this.ElementName;
+
         public InvalidVastElementException(string name, string message) : base(message) => this.ElementName = name;
     }
+
 }

@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		vast_4.1.xsd = vast_4.1.xsd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoVastLibTestHarness", "NeoVastLibTestHarness\NeoVastLibTestHarness.csproj", "{08052531-F462-4ABC-8329-E9B160A7EEF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8D07CD45-06F1-4FE8-A1CB-26B39B5516A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D07CD45-06F1-4FE8-A1CB-26B39B5516A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D07CD45-06F1-4FE8-A1CB-26B39B5516A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08052531-F462-4ABC-8329-E9B160A7EEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08052531-F462-4ABC-8329-E9B160A7EEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08052531-F462-4ABC-8329-E9B160A7EEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08052531-F462-4ABC-8329-E9B160A7EEF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
