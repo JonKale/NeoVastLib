@@ -91,32 +91,8 @@
         [Test]
         private void MinimalCompleteResponse()
         {
-            /*
-<VAST version="2.0">
-    <Ad id="2shsta4">
-        <InLine>
-            <AdSystem version="1.0">The Trade Desk</AdSystem>
-            <AdTitle>2shsta4</AdTitle>
-            <Creatives>
-                <Creative>
-                    <Linear>
-                        <Duration>00:00:15</Duration>
-                        <MediaFiles>
-                            <MediaFile delivery="progressive" height="720" width="1280" bitrate="3000" type="video/mp4">
-                                <![CDATA[
-                                 https://s3.eu-west-2.amazonaws.com/creative-delivery/prod/2019/AHG/IPG+(Interpublic+Group)/Cadreon/April/Accenture/Spain/15.04+Approved+creative/Accenture_NAN_Talent_ES.mp4
-                                ]]>
-                            </MediaFile>                            
-                        </MediaFiles>
-                    </Linear>
-                </Creative>
-            </Creatives>
-        </InLine>
-    </Ad>
-</VAST>
-             */
             var vastDoc = new XDocument(
-                new VastElement( new VersionAttribute("2.0"),
+                new VastElement( new VersionAttribute("4.0"),
                     new AdElement( new IdAttribute("2shsta4"),
                         new InLineElement(
                             new AdSystemElement(new VersionAttribute("1.0"),
